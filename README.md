@@ -52,16 +52,27 @@ This project demonstrates backend engineering best practices and secure API desi
 ## Project Structure
 
 ```bash
-flask_auth_api/
+flask-api/
 │
 ├── app/
-│   ├── models/
-│   ├── routes/
-│   ├── services/
-│   ├── utils/
+│   ├── __init__.py
 │   ├── config.py
 │   ├── extensions.py
-│   └── __init__.py
+│   ├── exceptions.py
+│   │
+│   ├── models/
+│   │   └── user.py
+│   │
+│   ├── routes/
+│   │   ├── auth.py
+│   │   └── api.py
+│   │
+│   ├── services/
+│   │   └── auth_service.py
+│   │
+│   └── utils/
+│       ├── decorators.py
+│       └── validators.py
 │
 ├── run.py
 ├── requirements.txt
@@ -76,7 +87,7 @@ Clone the repository:
 
 ```bash
 git clone <your-repo-url>
-cd flask_auth_api
+cd flask-api
 ```
 
 Create virtual environment:
